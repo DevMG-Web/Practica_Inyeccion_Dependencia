@@ -1,0 +1,10 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h3> Desde el ModelView: @Model.Mensaje </h3>
+
+@inject IEmailService emailServicesView
+<h3>Desde la vista: @emailServicesView.EnviarCorreo()</h3>
